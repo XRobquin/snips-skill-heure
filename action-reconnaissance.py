@@ -19,7 +19,7 @@ def intent_received(hermes, intent_message):
 		sentence = 'Salut '		
 		if len(intent_message.slots.Name) > 0:
 			#name = 'toi'
-			name = intent_message.slots.Name.first()
+			name = intent_message.slots.Name.first().value
 			sentence += name 
 			print(sentence)
 			
