@@ -17,10 +17,10 @@ def intent_received(hermes, intent_message):
 	if intent_message.intent.intent_name == 'xrobquin:Reconnaissance_proche':
 		
 		sentence = 'Salut '		
-		#if len(intent_message.slots) == 1				
-		#	name = intent_message.slots.Name.first()
-		#	sentence += name 
-		#	print(sentence)
+		if len(intent_message.slots.Name) == 1				
+			name = intent_message.slots.Name.first()
+			sentence += name 
+			print(sentence)
 			
 		hermes.publish_end_session(intent_message.session_id, sentence)
 
