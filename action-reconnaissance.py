@@ -24,7 +24,7 @@ def intent_received(hermes, intent_message):
 			print(sentence)
 		if len(intent_message.slots.Name) == 2:
 			sentence += 'à tous les '
-			sentence += str(len(intent_message.slots.Name))
+			#sentence += str(len(intent_message.slots.Name))
 				
 			
 		hermes.publish_end_session(intent_message.session_id, sentence)
