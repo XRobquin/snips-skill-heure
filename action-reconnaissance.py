@@ -25,7 +25,7 @@ def intent_received(hermes, intent_message):
 				name = 'Williame'
 			sentence += name
 		if len(intent_message.slots.Name2)==1:
-			sentence += 'et'
+			sentence += ' et '
 			name = intent_message.slots.Name2.first().value
 			if (name =='William'):
 				name = 'Williame'
