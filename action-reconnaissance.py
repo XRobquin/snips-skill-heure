@@ -22,7 +22,7 @@ def intent_received(hermes, intent_message):
 			name = intent_message.slots.Name.first().value
 			sentence += name
 			print(sentence)
-		else:
+		if len(intent_message.slots.Name) == 2:
 			sentence += 'à tous les '
 			sentence += str(len(intent_message.slots.Name))
 				
