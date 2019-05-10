@@ -17,7 +17,7 @@ def intent_received(hermes, intent_message):
 	if intent_message.intent.intent_name == 'xrobquin:Reconnaissance_proche':
 		
 		sentence = 'Salut '		
-		if len(intent_message.slots.Name)>0:
+		if len(intent_message.slots.Name)==0:
 			#name = 'toi'
 			name = intent_message.slots.Name.first().value
 			sentence += name
