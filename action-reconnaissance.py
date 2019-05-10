@@ -21,6 +21,7 @@ def intent_received(hermes, intent_message):
 			#name = 'toi'
 			name = intent_message.slots.Name.first().value
 			sentence += name
+			sentence += str(3)
 			
 				
 			
