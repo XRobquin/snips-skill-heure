@@ -24,7 +24,7 @@ def intent_received(hermes, intent_message):
 			print(sentence)
 		else:
 			sentence = 'Bien le bonjour à tous les'
-			sentence += str(len(intent_message.slots.Name))
+			
 				
 			
 		hermes.publish_end_session(intent_message.session_id, sentence)
