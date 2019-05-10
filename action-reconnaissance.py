@@ -23,8 +23,8 @@ def intent_received(hermes, intent_message):
 			#name = 'toi'
 			name = intent_message.slots.Name.first().value
 			sentence += name
-		if len(intent_message.slots.Name)==2:
-			#name = 'toi'
+		if len(intent_message.slots.Name2)==1:
+			sentence += 'et'
 			name = intent_message.slots.Name.first().value
 			sentence += name
 			
