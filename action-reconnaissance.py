@@ -23,7 +23,8 @@ def intent_received(hermes, intent_message):
 			sentence += name
 			print(sentence)
 		else:
-			sentence = 'Je suis la'
+			sentence = 'Bien le bonjour à tous les'
+			sentence += str(len(intent_message.slots.Name))
 				
 			
 		hermes.publish_end_session(intent_message.session_id, sentence)
