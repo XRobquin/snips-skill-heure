@@ -22,8 +22,6 @@ def intent_received(hermes, intent_message):
 			name = intent_message.slots.Name.first().value
 			sentence += name
 			print(sentence)
-		else:
-			sentence = 'Bien le bonjour à tous les'
 			
 				
 			
