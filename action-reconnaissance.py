@@ -22,9 +22,6 @@ def intent_received(hermes, intent_message):
 			name = intent_message.slots.Name.first().value
 			sentence += name
 			print(sentence)
-		#elif len(intent_message.slots.Name) == 2:
-			#sentence += 'à tous les '
-			#sentence += str(len(intent_message.slots.Name))
 				
 			
 		hermes.publish_end_session(intent_message.session_id, sentence)
@@ -32,3 +29,11 @@ def intent_received(hermes, intent_message):
 
 with Hermes(MQTT_ADDR) as h:
 	h.subscribe_intents(intent_received).start()
+	
+	
+	
+	
+	
+	
+	
+	
