@@ -22,6 +22,8 @@ def intent_received(hermes, intent_message):
 			name = intent_message.slots.Name.first().value
 			sentence += name
 			print(sentence)
+		else:
+			sentence = 'Je suis la'
 				
 			
 		hermes.publish_end_session(intent_message.session_id, sentence)
