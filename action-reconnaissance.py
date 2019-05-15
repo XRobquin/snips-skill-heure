@@ -2,7 +2,6 @@
 from hermes_python.hermes import Hermes
 from datetime import datetime
 from pytz import timezone
-#import random
 
 MQTT_IP_ADDR = "localhost"
 MQTT_PORT = 1883
@@ -15,7 +14,7 @@ def intent_received(hermes, intent_message):
 	print(intent_message.intent.intent_name)
 	print ()
 	
-	liste_reponses_marie = ["vous penserez à rendre ce haut à Xavier", "Dites camion", "Je vous trouve très en beauté", "Si votre ramage se rapporte à votre plumage, vous êtes la phoenix des hôtes de la MDS"]
+	#liste_reponses_marie = ["vous penserez à rendre ce haut à Xavier", "Dites camion", "Je vous trouve très en beauté", "Si votre ramage se rapporte à votre plumage, vous êtes la phoenix des hôtes de la MDS"]
 	
 
 	if intent_message.intent.intent_name == 'xrobquin:Reconnaissance_proche':
