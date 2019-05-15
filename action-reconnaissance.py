@@ -41,7 +41,7 @@ def intent_received(hermes, intent_message):
 			name = intent_message.slots.Name2.first().value
 			if (name =='William'):
 				name = 'Williame'
-			if (name =='Marie):
+			if (name =='Marie'):
 			    	index_reponse = random.randint(0,len(liste_reponses_marie))
 				result_sentence = liste_reponses_marie[index_reponse]
 			    
