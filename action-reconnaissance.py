@@ -13,9 +13,7 @@ def intent_received(hermes, intent_message):
 	print()
 	print(intent_message.intent.intent_name)
 	print ()
-	
-	#liste_reponses_marie = ["vous penserez à rendre ce haut à Xavier", "Dites camion", "Je vous trouve très en beauté", "Si votre ramage se rapporte à votre plumage, vous êtes la phoenix des hôtes de la MDS"]
-	
+
 
 	if intent_message.intent.intent_name == 'xrobquin:Reconnaissance_proche':
 		
@@ -24,10 +22,7 @@ def intent_received(hermes, intent_message):
 		if len(intent_message.slots.Name)==1:
 			name = intent_message.slots.Name.first().value
 			if (name =='William'):
-				name = 'Williame,'
-			#if (name =='Marie'):
-			#   	index_reponse = random.randint(0,len(liste_reponses_marie))
-			#	result_sentence = liste_reponses_marie[index_reponse]
+				name = 'Williame'
 			    
 			sentence += name
 			#sentence += result_sentence
