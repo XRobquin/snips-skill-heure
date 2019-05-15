@@ -2,7 +2,7 @@
 from hermes_python.hermes import Hermes
 from datetime import datetime
 from pytz import timezone
-import random
+#import random
 
 MQTT_IP_ADDR = "localhost"
 MQTT_PORT = 1883
@@ -26,12 +26,12 @@ def intent_received(hermes, intent_message):
 			name = intent_message.slots.Name.first().value
 			if (name =='William'):
 				name = 'Williame,'
-			if (name =='Marie'):
-			   	index_reponse = random.randint(0,len(liste_reponses_marie))
-				result_sentence = liste_reponses_marie[index_reponse]
+			#if (name =='Marie'):
+			#   	index_reponse = random.randint(0,len(liste_reponses_marie))
+			#	result_sentence = liste_reponses_marie[index_reponse]
 			    
 			sentence += name
-			sentence += result_sentence
+			#sentence += result_sentence
 			
 			    
 			
@@ -41,12 +41,7 @@ def intent_received(hermes, intent_message):
 			name = intent_message.slots.Name2.first().value
 			if (name =='William'):
 				name = 'Williame'
-			if (name =='Marie'):
-			    	index_reponse = random.randint(0,len(liste_reponses_marie))
-				result_sentence = liste_reponses_marie[index_reponse]
-			    
-			sentence += name
-			sentence += result_sentence
+
 			
 			
 				
