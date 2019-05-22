@@ -29,6 +29,7 @@ def intent_received(hermes, intent_message):
 				name = 'Williame'
 			    
 			sentence += name
+			sentence += liste_reponses_appetit[0]
 			
 			
 			    
