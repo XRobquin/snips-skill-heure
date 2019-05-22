@@ -19,6 +19,8 @@ def intent_received(hermes, intent_message):
 
 	if intent_message.intent.intent_name == 'xrobquin:Reconnaissance_proche':
 		
+		liste_reponses_appetit = ["J'adore ce haut"]
+		
 		sentence = 'Salut '	
 		
 		if len(intent_message.slots.Name)==1:
@@ -27,6 +29,7 @@ def intent_received(hermes, intent_message):
 				name = 'Williame'
 			    
 			sentence += name
+			
 			
 			    
 			
