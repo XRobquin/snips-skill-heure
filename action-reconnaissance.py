@@ -21,8 +21,8 @@ def intent_received(hermes, intent_message):
 	anniv = datetime.date(year+1, 6, 3) 
 	diff = anniv - today
 
-	liste_reponses_appetit = ["J'adore ce haut", "Comment allez-vous aujourd'hui?", "Prête pour le permis?", 
-				  "J moins "+str(diff.days%365-1)+" avant votre anniversaire","Mes amitiés à tête de noisette",
+	liste_reponses_appetit = ["J'adore ce haut", "Comment allez-vous aujourd'hui?", "Prete pour le permis?", 
+				  "J moins "+str(diff.days%365-1)+" avant votre anniversaire","Mes amitiers a tete de noisette",
 				 "Je suis ravie de faire la conversation avec vous"]
 	index_reponse = random.randint(0,len(liste_reponses_appetit)-1)
 	result_sentence_marie = liste_reponses_appetit[index_reponse]
