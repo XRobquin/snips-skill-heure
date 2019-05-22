@@ -14,18 +14,7 @@ def intent_received(hermes, intent_message):
 	print()
 	print(intent_message.intent.intent_name)
 	print ()
-	
-	now = datetime.datetime.now()
-	year = now.year
-	today = datetime.date.today()
-	anniv = datetime.date(year+1, 6, 3) 
-	diff = anniv - today
 
-	liste_reponses_appetit = ["J'adore ce haut", "Comment allez-vous aujourd'hui?", "Prete pour le permis?", 
-				  "J moins "+str(diff.days%365-1)+" avant votre anniversaire","Mes amitiers a tete de noisette",
-				 "Je suis ravie de faire la conversation avec vous"]
-	index_reponse = random.randint(0,len(liste_reponses_appetit)-1)
-	result_sentence_marie = liste_reponses_appetit[index_reponse]
 
 
 	if intent_message.intent.intent_name == 'xrobquin:Reconnaissance_proche':
@@ -38,7 +27,13 @@ def intent_received(hermes, intent_message):
 				name = 'Williame'
 			    
 			sentence += name
-			sentence += result_sentence_marie
+			
+			now = datetime.datetime.now()
+			year = now.year
+			today = datetime.date.today()
+			anniv = datetime.date(year+1, 6, 3) 
+			diff = anniv - today
+			sentence += str(diff)
 			
 			    
 			
