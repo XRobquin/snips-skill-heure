@@ -2,6 +2,7 @@
 from hermes_python.hermes import Hermes
 from datetime import datetime
 from pytz import timezone
+import random
 
 MQTT_IP_ADDR = "localhost"
 MQTT_PORT = 1883
@@ -13,6 +14,18 @@ def intent_received(hermes, intent_message):
 	print()
 	print(intent_message.intent.intent_name)
 	print ()
+	
+	now = datetime.datetime.now()
+	year = now.year
+	today = datetime.date.today()
+	anniv = datetime.date(year+1, 6, 3) 
+	diff = anniv - today
+
+	liste_reponses_appetit = ["J'adore ce haut", "Comment allez-vous aujourd'hui?", "Prête pour le permis?", 
+				  "J moins "+str(diff.days%365-1)+" avant votre anniversaire","Mes amitiés à tête de noisette",
+				 "Je suis ravie de faire la conversation avec vous"]
+	index_reponse = random.randint(0,len(liste_reponses_appetit)-1)
+	result_sentence_marie = liste_reponses_appetit[index_reponse]
 
 
 	if intent_message.intent.intent_name == 'xrobquin:Reconnaissance_proche':
