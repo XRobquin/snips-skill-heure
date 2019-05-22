@@ -38,7 +38,7 @@ def intent_received(hermes, intent_message):
 				name = 'Williame'
 			    
 			sentence += name
-			#sentence += result_sentence
+			sentence += result_sentence_marie
 			
 			    
 			
