@@ -14,12 +14,18 @@ def intent_received(hermes, intent_message):
 	print()
 	print(intent_message.intent.intent_name)
 	print ()
+	
+	now = datetime.datetime.now()
+	year = now.year
+	today = datetime.date.today()
+	anniv = datetime.date(year+1, 6, 3) 
+	diff = anniv - today
 
 
 
 	if intent_message.intent.intent_name == 'xrobquin:Reconnaissance_proche':
 		
-		liste_reponses_appetit = [" J'adore ce haut", " Comment allez-vous aujourd'hui?", " j'ai besoin de repos"]
+		liste_reponses_appetit = [" J'adore ce haut", " Comment allez vous aujourd'hui?", " j'ai besoin de repos"]
 		sentence = 'Salut '	
 		
 		if len(intent_message.slots.Name)==1:
