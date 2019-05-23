@@ -19,9 +19,7 @@ def intent_received(hermes, intent_message):
 
 	if intent_message.intent.intent_name == 'xrobquin:Reconnaissance_proche':
 		
-		liste_reponses_appetit = [", J'adore ce haut", ", Comment allez-vous aujourd'hui?", 
-					  ", Alors ce permis?", ", Mes amitiés à tête de noisette",
-                         		", Je suis ravie de faire la conversation avec vous", ", on commande des sushis ?"]
+		liste_reponses_appetit = [", J'adore ce haut", ", Comment allez-vous aujourd'hui?", ", Alors ce permis?", ", Mes amitiés à tête de noisette", ", Je suis ravie de faire la conversation avec vous", ", on commande des sushis ?"]
 		
 		sentence = 'Salut '	
 		
