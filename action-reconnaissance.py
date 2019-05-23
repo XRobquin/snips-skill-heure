@@ -28,9 +28,9 @@ def intent_received(hermes, intent_message):
 				name = 'Williame'
 			    
 			sentence += name
-			sentence += liste_reponses_appetit[0]
 			sentence += ', '
-			sentence += str(random.randint(0,len(liste_reponses_appetit)-1))
+			sentence += liste_reponses_appetit[random.randint(0,len(liste_reponses_appetit)-1)]
+			
 			
 			    
 			
