@@ -20,7 +20,7 @@ def intent_received(hermes, intent_message):
 	year = now.year
 	today = datetime.date.today()
 	anniv = datetime.date(year+1, 6, 3) 
-	diff = anniv - today
+	diff = (anniv - today)%365
 
 
 
