@@ -15,7 +15,7 @@ def intent_received(hermes, intent_message):
 	print(intent_message.intent.intent_name)
 	print ()
 	
-	now = datetime.datetime.now()
+
 
 
 
