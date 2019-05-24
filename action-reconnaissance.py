@@ -1,6 +1,6 @@
 #!/usr/bin/env python2
 from hermes_python.hermes import Hermes
-from datetime import datetime
+import datetime
 from pytz import timezone
 import random
 
@@ -16,7 +16,11 @@ def intent_received(hermes, intent_message):
 	print ()
 	
 
-
+	now = datetime.datetime.now()
+	year = now.year
+	today = datetime.date.today()
+	anniv = datetime.date(year+1, 6, 3) 
+	diff = anniv - today
 
 
 
@@ -33,6 +37,7 @@ def intent_received(hermes, intent_message):
 			sentence += name
 			sentence += ', '
 			sentence += liste_reponses_appetit[random.randint(0,len(liste_reponses_appetit)-1)]
+			sentence += str(diff)
 			
 			
 			    
