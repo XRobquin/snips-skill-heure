@@ -1,6 +1,6 @@
 #!/usr/bin/env python2
 from hermes_python.hermes import Hermes
-import datetime
+from datetime import datetime
 from pytz import timezone
 import random
 
@@ -19,14 +19,27 @@ def intent_received(hermes, intent_message):
 
 	if intent_message.intent.intent_name == 'xrobquin:Reconnaissance_proche':
 		
+		liste_reponses_appetit = ["J'adore ce haut"]
+		
 		sentence = 'Salut '	
 		
 		if len(intent_message.slots.Name)==1:
 			name = intent_message.slots.Name.first().value
 			if (name =='William'):
 				name = 'Williame'
+			    
+			sentence += name
+			sentence += liste_reponses_appetit[0]
 			
 			
+			    
+			
+			
+		if len(intent_message.slots.Name2)==1:
+			sentence += ' et salut '
+			name = intent_message.slots.Name2.first().value
+			if (name =='William'):
+				name = 'Williame'
 
 			
 			
@@ -36,4 +49,8 @@ def intent_received(hermes, intent_message):
 
 
 with Hermes(MQTT_ADDR) as h:
-h.subscribe_intents(intent_received).start()
+	h.subscribe_intents(intent_received).start()
+	
+	
+	
+	
