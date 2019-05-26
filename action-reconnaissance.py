@@ -32,7 +32,7 @@ def intent_received(hermes, intent_message):
 
 	if intent_message.intent.intent_name == 'xrobquin:Reconnaissance_proche':
 		
-		liste_reponses_appetit = ["Il reste "]
+		liste_reponses_appetit = ["Il reste "+str(diff.days%365-1)+" jours avant votre anniversaire"]
 		
 		sentence = 'Salut '	
 		
@@ -44,8 +44,6 @@ def intent_received(hermes, intent_message):
 			sentence += name
 			sentence += ', '
 			sentence += liste_reponses_appetit[0]
-			sentence += str(diff.days%365-1)
-			sentence +=' jours avant votre anniversaire'
 			
 			
 			    
