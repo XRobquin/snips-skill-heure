@@ -42,8 +42,9 @@ def intent_received(hermes, intent_message):
 				name = 'Williame'
 			    
 			sentence += name
+			sentence += ' ,'
 			sentence += liste_reponses_appetit[0]
-			sentence += str(diff.days)
+			sentence += str(diff.days%365-1)
 			
 			
 			    
