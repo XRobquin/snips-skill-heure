@@ -38,16 +38,16 @@ def intent_received(hermes, intent_message):
 		sentence = 'Salut '	
 		
 		if len(intent_message.slots.Name)==1:
-			name = intent_message.slots.Name.first().value
+			name = intent_message.slots.Name.first().value				
+			  
 			if (name =='William'):
 				name = 'Williame'
-			    
-			sentence += name
-			sentence += ', '
-			
-			if (name =='William'):			
+				sentence += name
+				sentence += ', '
 				sentence += liste_reponses_william[random.randint(0,len(liste_reponses_william)-1)]
-			if (name =='Marie'):			
+			if (name =='Marie'):
+				sentence += name
+				sentence += ', '				
 				sentence += liste_reponses_marie[random.randint(0,len(liste_reponses_marie)-1)]
 			
 			
