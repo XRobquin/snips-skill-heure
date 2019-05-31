@@ -32,8 +32,9 @@ def intent_received(hermes, intent_message):
 
 	if intent_message.intent.intent_name == 'xrobquin:Reconnaissance_proche':
 		
-		liste_reponses_marie = ["Il reste "+str(diff.days%365-1)+" jours avant votre anniversaire", "vous ne devinerez jamais mon cadeau"]
-		
+		liste_reponses_marie = ["Il reste "+str(diff.days%365-1)+" jours avant votre anniversaire", "vous ne devinerez jamais mon cadeau","j'adore votre haut"]
+		liste_reponses_william = ["Il reste "+str(diff.days%365-2)+" jours avant votre anniversaire", "vous ne devinerez jamais mon cadeau","j'espère vous voir bientôt à Roland Garros"]
+
 		sentence = 'Salut '	
 		
 		if len(intent_message.slots.Name)==1:
@@ -43,7 +44,11 @@ def intent_received(hermes, intent_message):
 			    
 			sentence += name
 			sentence += ', '
-			sentence += liste_reponses_marie[random.randint(0,len(liste_reponses_marie)-1)]
+			
+			if (name =='William'):			
+				sentence += liste_reponses_william[random.randint(0,len(liste_reponses_william)-1)]
+			if (name =='Marie'):			
+				sentence += liste_reponses_marie[random.randint(0,len(liste_reponses_marie)-1)]
 			
 			
 			    
